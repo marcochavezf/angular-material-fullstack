@@ -1,0 +1,39 @@
+<div layout="row" ng-cloak class="full-height">
+
+  <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2"
+              md-component-id="left"
+              ng-click="toggleList()" aria-label="Show User List"
+              md-is-locked-open="$mdMedia('gt-sm')">
+
+    <md-toolbar class="md-whiteframe-z1">
+      <h3>Menu</h3>
+    </md-toolbar>
+
+    <md-list>
+      <md-list-item ng-repeat="it in menu">
+          <md-button ng-click="changeState(it.state)" ng-class="{'selected' : it.state === state.current.name }">
+            <md-icon md-svg-icon="{{it.icon}}" class="avatar"></md-icon>
+            {{it.title}}
+          </md-button>
+      </md-list-item>
+    </md-list>
+
+
+
+  </md-sidenav>
+
+  <div flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2">
+
+    <md-toolbar layout="row" class="md-whiteframe-z1">
+      <md-button id="main" class="menu" hide-gt-sm ng-click="toggleList()" aria-label="Show User List">
+        <md-icon md-svg-icon="menu" ></md-icon>
+      </md-button>
+      <h3>Angular Material - Starter App</h3>
+    </md-toolbar>
+
+    <md-content ui-view flex id="content">
+    </md-content>
+
+  </div>
+
+</div>

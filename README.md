@@ -1,6 +1,6 @@
 # angular-material-fullstack
 
-This project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 3.1.1 and has been merged with [Angular Material-Start](https://github.com/angular/material-start), you can see a live demo [here](https://angular-material-fullstack.herokuapp.com). Also language translation was added using this [tutorial](https://scotch.io/tutorials/internationalization-of-angularjs-applications).
+This project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 3.1.1 and has been merged with [Angular Material-Start](https://github.com/angular/material-start). You can see a live demo [here](https://angular-material-fullstack.herokuapp.com). Also language translation was added using this [tutorial](https://scotch.io/tutorials/internationalization-of-angularjs-applications).
 
 ## Getting Started
 

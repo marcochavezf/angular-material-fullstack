@@ -12,7 +12,7 @@ angular.module('angularMaterialFullstackApp', [
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider
-      .otherwise('/main');
+      .otherwise('/main/user');
 
     $locationProvider.html5Mode(true);
   })

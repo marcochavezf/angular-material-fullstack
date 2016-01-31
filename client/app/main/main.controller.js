@@ -15,6 +15,7 @@ angular.module('angularMaterialFullstackApp')
         icon: 'svg-2'
       }
     ];
+
     $scope.state = $state;
 
     /**
@@ -27,4 +28,8 @@ angular.module('angularMaterialFullstackApp')
     $scope.changeState = function(state){
       $state.transitionTo(state);
     };
+
+    if($state.current.name === 'main'){
+      $state.transitionTo('main.user');
+    }
 });

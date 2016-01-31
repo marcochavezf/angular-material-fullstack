@@ -18,7 +18,9 @@ module.exports = function (grunt) {
     protractor: 'grunt-protractor-runner',
     buildcontrol: 'grunt-build-control',
     istanbul_check_coverage: 'grunt-mocha-istanbul',
-    ngconstant: 'grunt-ng-constant'
+    ngconstant: 'grunt-ng-constant',
+    replace: 'grunt-text-replace',
+    inline: 'grunt-inline'
   });
 
   // Time how long tasks take. Can help when optimizing build times
@@ -654,6 +656,53 @@ module.exports = function (grunt) {
         }
       }
     },
+
+    replace: {
+      development: {
+        src: ['<%= yeoman.client %>/index.html'],
+        dest: '<%= yeoman.client %>/index.html',
+        replacements: [{
+          from: /<script src="(.*\.js)"><\/script>/g,
+          to: '<script>jsFiles.push(\'$1\');<\/script>'
+        }]
+      },
+      dist: {
+        src: ['<%= yeoman.dist %>/index.html'],
+        dest: '<%= yeoman.dist %>/index.html',
+        replacements: [{
+          from: /<script src="(.*\.js)"><\/script>/g,
+          to: '<script>jsFiles.push(\'$1\');<\/script>'
+        },{
+          from: /<link.*href="(.*\.css)".*>/g,
+          to: '<link href=\"$1?__inline=true\" rel="stylesheet" \/>'
+        },{
+          from: /<link rel='stylesheet' .*href="(.*\.css)".*>/g,
+          to: '<link href=\"$1?__inline=true\" rel="stylesheet" \/>'
+        }]
+      },
+      clean: {
+        src: ['<%= yeoman.client %>/index.html'],
+        dest: '<%= yeoman.client %>/index.html',
+        replacements: [{
+          from: /<script>jsFiles.push\('(.*\.js)'\);<\/script>/g,
+          to: '<script src=\"$1\"><\/script>'
+        }, {
+          from: /<script>cssFiles.push\('(.*\.css)'\);<\/script>/g,
+          to: '<link rel="stylesheet" href=\"$1\"\/>'
+        }]
+      }
+    },
+
+    inline: {
+      dist: {
+        options:{
+          cssmin: true,
+          uglify: true
+        },
+        src: '<%= yeoman.dist %>/index.html',
+        dest: '<%= yeoman.dist %>/index.html'
+      }
+    },
   });
 
   // Used for delaying livereload until after server has restarted
@@ -685,6 +734,8 @@ module.exports = function (grunt) {
         'concurrent:server',
         'injector',
         'wiredep:client',
+        'inline:dist',
+        'replace:development',
         'postcss',
         'concurrent:debug'
       ]);
@@ -697,6 +748,8 @@ module.exports = function (grunt) {
       'concurrent:server',
       'injector',
       'wiredep:client',
+      'inline:dist',
+      'replace:development',
       'postcss',
       'express:dev',
       'wait',
@@ -803,6 +856,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('build', [
+    'replace:clean',
     'clean:dist',
     'concurrent:pre',
     'concurrent:dist',
@@ -819,7 +873,9 @@ module.exports = function (grunt) {
     'cssmin',
     'uglify',
     'filerev',
-    'usemin'
+    'usemin',
+    'replace:dist',
+    'inline:dist'
   ]);
 
   grunt.registerTask('default', [

@@ -51,6 +51,13 @@
       ga('send', 'pageview');
     </script>
 
+    <script>
+      var jsFiles=[];
+      var exec =function(){
+        console.log('exec');
+      };
+    </script>
+
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
@@ -92,5 +99,8 @@
       <script src="components/util/util.service.js"></script>
       <!-- endinjector -->
     <!-- endbuild -->
+  <script>
+    function loadScript(e,t){var o,r,a;r=!1,o=document.createElement("script"),o.type="text/javascript",o.src=e,o.onload=o.onreadystatechange=function(){r||this.readyState&&"complete"!=this.readyState||(r=!0,t())},a=document.getElementsByTagName("script")[0],a.parentNode.insertBefore(o,a)}function recursiveJsLoader(){var e=jsFiles.shift();loadScript(e,function(){jsFiles.length>0?recursiveJsLoader():done()})}var timerToReloadJs=setTimeout(function(){location.reload()},15e3),done=function(){clearTimeout(timerToReloadJs),exec()};recursiveJsLoader();
+  </script>
   </body>
 </html>

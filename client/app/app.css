@@ -2176,6 +2176,9 @@ span.name {
   font-size: 1.1em;
   padding-left: 5px; }
 
+md-toolbar {
+  min-height: 64px; }
+
 footer.footer {
   text-align: center;
   padding: 30px 0;

@@ -6,7 +6,7 @@
               md-is-locked-open="$mdMedia('gt-sm')">
 
     <md-toolbar class="md-whiteframe-z1">
-      <h3>Menu</h3>
+      <h3>{{ "Menu" | translate }}</h3>
     </md-toolbar>
 
     <md-list>
@@ -29,6 +29,10 @@
         <md-icon md-svg-icon="menu" ></md-icon>
       </md-button>
       <h3>Angular Material - Starter App</h3>
+
+      <div ng-translate-language-select></div>
+
+
     </md-toolbar>
 
     <md-content ui-view flex id="content">

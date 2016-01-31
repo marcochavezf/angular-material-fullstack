@@ -10,12 +10,11 @@
 angular
   .module('angularMaterialFullstackApp')
   .controller('UserController', function($scope, $mdBottomSheet, $log) {
-
     $scope.makeContact  = makeContact;
     $scope.user = {
       icon: 'svg-1',
       name: 'User name',
-      content: 'Bacon ipsum dolor amet tenderloin prosciutto porchetta ham hock chicken beef ribeye short loin sirloin. Ground round sausage flank shoulder capicola bresaola drumstick. Tail bacon kevin corned beef pastrami ribeye shank shankle ground round picanha prosciutto spare ribs porchetta. Ribeye shankle salami pork picanha.'
+      content: 'content'
     };
 
     /**
@@ -28,13 +27,14 @@ angular
         controller    : [ '$mdBottomSheet', ContactSheetController],
         parent        : angular.element(document.getElementById('content'))
       }).then(function(clickedItem) {
-        $log.debug( clickedItem.name + ' clicked!');
+        $log.debug( clickedItem + ' clicked!');
       });
 
       /**
        * User ContactSheet controller
        */
       function ContactSheetController( $mdBottomSheet ) {
+        this.user = $scope.user;
         this.actions = [
           { name: 'Phone'       , icon: 'phone'       , icon_url: 'assets/svg/phone.svg'},
           { name: 'Twitter'     , icon: 'twitter'     , icon_url: 'assets/svg/twitter.svg'},

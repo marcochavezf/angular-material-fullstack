@@ -27,5 +27,4 @@ angular.module('angularMaterialFullstackApp')
     $scope.changeState = function(state){
       $state.transitionTo(state);
     };
-
 });

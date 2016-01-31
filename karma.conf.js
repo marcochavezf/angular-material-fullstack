@@ -22,6 +22,12 @@ module.exports = function(config) {
       'client/bower_components/angular-sanitize/angular-sanitize.js',
       'client/bower_components/lodash/lodash.js',
       'client/bower_components/angular-ui-router/release/angular-ui-router.js',
+      'client/bower_components/angular-translate/angular-translate.js',
+      'client/bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
+      'client/bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js',
+      'client/bower_components/angular-translate-storage-local/angular-translate-storage-local.js',
+      'client/bower_components/angular-translate-handler-log/angular-translate-handler-log.js',
+      'client/bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js',
       'client/bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'client/app/app.js',

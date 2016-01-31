@@ -6,7 +6,9 @@ angular.module('angularMaterialFullstackApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ui.router'
+  'ui.router',
+  'pascalprecht.translate',// angular-translate
+  'tmh.dynamicLocale'// angular-dynamic-locale
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider
@@ -30,4 +32,19 @@ angular.module('angularMaterialFullstackApp', [
       .primaryPalette('teal')
       .accentPalette('light-green');
 
+  })
+
+  .config(function ($translateProvider) {
+    $translateProvider.useMissingTranslationHandlerLog();
+    $translateProvider.useStaticFilesLoader({
+      prefix: 'components/resources/locale-',// path to translations files
+      suffix: '.json'// suffix, currently- extension of the translations
+    });
+    $translateProvider.preferredLanguage('en_US');// is applied on first load
+    $translateProvider.useLocalStorage();// saves selected language to localStorage
+    $translateProvider.useSanitizeValueStrategy('sanitizeParameters');
+  })
+
+  .config(function (tmhDynamicLocaleProvider) {
+    tmhDynamicLocaleProvider.localeLocationPattern('bower_components/angular-i18n/angular-locale_{{locale}}.js');
   });

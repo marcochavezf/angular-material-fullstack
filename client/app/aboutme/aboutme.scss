@@ -1,0 +1,60 @@
+.tool-bar-aboutme {
+  margin-bottom: 15px;
+}
+.card-content-aboutme {
+  margin-bottom: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: justify;
+}
+.card-avatar-aboutme {
+  height: 100px;
+  width: 100px;
+}
+.h3-aboutme{
+  margin: 25px auto 0 10px
+}
+.button-contact-aboutme {
+  margin: 0 auto auto 17.5px;
+}
+.button-social-network-first-sm {
+  display: none;
+  margin: 0 0 auto 5px;
+}
+.button-social-network-first {
+  display: inline;
+  margin: 0 0 auto 5px;
+}
+.button-social-network {
+  display: inline;
+  margin: 0 0 auto 5px;
+}
+
+@media (max-width: 599px) {
+  .card-content-aboutme {
+    margin-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: justify;
+  }
+  .button-social-network-first-sm {
+    display: inline;
+    margin: 0;
+  }
+  .button-social-network-first {
+    display: none;
+  }
+  .button-social-network {
+    display: inline;
+    margin: 0;
+  }
+  .md-button.md-icon-button {
+    margin: 0;
+    height: 40px;
+    min-width: 0;
+    line-height: 24px;
+    padding: 8px;
+    width: 40px;
+    border-radius: 50%;
+  }
+}

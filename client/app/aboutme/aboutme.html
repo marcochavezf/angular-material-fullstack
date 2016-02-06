@@ -1,0 +1,101 @@
+<md-content class="md-padding" xmlns="http://www.w3.org/1999/html">
+
+<md-card>
+  <md-card-header>
+
+    <md-card-avatar class="card-avatar-aboutme">
+      <img class="md-user-avatar" src="assets/images/marcochavezf.png"/>
+    </md-card-avatar>
+
+    <md-card-header-text>
+      <span class="md-title">
+
+        <h3 class="h3-aboutme">{{ user.name }}</h3>
+
+        <md-button ng-click="makeContact()" class="button-contact-aboutme" aria-label="Share with {{ user.name }}">
+          <md-tooltip md-direction="right">{{ "Contact info" | translate }}</md-tooltip>
+          {{ "Contact" | translate }}
+        </md-button>
+
+        <md-button class="md-icon-button button-social-network-first-sm"
+                   aria-label="github" href="https://github.com/marcochavezf" target="_blank">
+          <md-icon md-svg-icon="github"></md-icon>
+        </md-button>
+
+        <md-button style="margin-left: 40px;" class="md-icon-button button-social-network-first"
+                   aria-label="github" href="https://github.com/marcochavezf" target="_blank">
+          <md-icon md-svg-icon="github"></md-icon>
+        </md-button>
+
+        <md-button class="md-icon-button button-social-network"
+                   aria-label="linkedin" href="https://mx.linkedin.com/in/marcochavezf" target="_blank">
+          <md-icon md-svg-icon="linkedin"></md-icon>
+        </md-button>
+
+        <md-button class="md-icon-button button-social-network" aria-label="twitter"
+                   href="https://twitter.com/marcochavezf" target="_blank">
+          <md-icon md-svg-icon="twitter"></md-icon>
+        </md-button>
+
+      </span>
+    </md-card-header-text>
+
+  </md-card-header>
+
+  <md-toolbar class="tool-bar-aboutme">
+    <div class="md-toolbar-tools">
+      <h2>
+        <span>{{ "Last job" | translate }}</span>
+      </h2>
+    </div>
+  </md-toolbar>
+
+  <md-card-content class="card-content-aboutme">
+    <p ng-bind-html="('last.job.paragraph.a' | translate)  + ' ' + ('last.job.paragraph.b' | translate)"></p>
+  </md-card-content>
+
+
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>
+        <span>{{ "Previous jobs" | translate }}</span>
+      </h2>
+    </div>
+  </md-toolbar>
+
+
+  <md-card-content class="card-content-aboutme">
+    <ul>
+      <li ng-bind-html='"previous.jobs.yogome.explanation" | translate'></li>
+      <br/>
+      <li ng-bind-html="'previous.jobs.headykidz.explanation' | translate"></li>
+      <br/>
+      <li ng-bind="'previous.jobs.pmaspenergia.explanation' | translate"></li>
+    </ul>
+  </md-card-content>
+
+  <md-toolbar class="tool-bar-aboutme">
+    <div class="md-toolbar-tools">
+      <h2>
+        <span>{{ "Personal info" | translate }}</span>
+      </h2>
+    </div>
+  </md-toolbar>
+
+  <md-card-content class="card-content-aboutme">
+    <p>
+      {{ "personal.info.paragraph.a" | translate }}
+    </p>
+    <p>
+      {{ "personal.info.paragraph.b" | translate }}
+    </p>
+  </md-card-content>
+
+</md-card>
+
+  <p align="center">
+    <small ng-bind-html="'this.site.was.built.with' | translate"></small>
+  </p>
+
+</md-content>
+

@@ -1,0 +1,52 @@
+<md-content class="md-padding" layout="column">
+
+  <md-card ng-repeat="skill in skills">
+
+    <md-toolbar class="tool-bar-aboutme">
+      <div class="md-toolbar-tools">
+        <h2>
+          <span>{{ skill.title }}</span>
+        </h2>
+      </div>
+    </md-toolbar>
+
+    <md-card-content>
+      <div ng-repeat="technologie in skill.technologies">
+        <h2 class="md-title md-raised md-primary">
+          {{ technologie.title }}
+          <md-tooltip md-direction="left" style="font-size: 17px;">
+            {{ technologie.level | translate }}
+          </md-tooltip>
+        </h2>
+        <md-progress-linear md-mode="determinate" ng-show="technologie.value" value="{{ technologie.value }}"></md-progress-linear>
+      </div>
+    </md-card-content>
+
+  </md-card>
+
+  <md-card>
+    <md-toolbar class="tool-bar-aboutme">
+      <div class="md-toolbar-tools">
+        <h2>
+          <span>{{ "Other" | translate }}</span>
+        </h2>
+      </div>
+    </md-toolbar>
+
+    <md-card-content>
+
+      <md-list>
+        <md-list-item class="md-2-line other-skills-option" ng-repeat="skill in otherSkills" layout="row">
+
+          <div class="md-item-text md-whiteframe-1dp" flex>
+            <h3>{{skill.title}}</h3>
+            <p>{{skill.level | translate }}</p>
+          </div>
+
+        </md-list-item>
+      </md-list>
+
+    </md-card-content>
+  </md-card>
+
+</md-content>

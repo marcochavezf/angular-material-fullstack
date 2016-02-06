@@ -1,16 +1,16 @@
 'use strict';
 
-describe('Controller: UserController', function () {
+describe('Controller: SkillsCtrl', function () {
 
   // load the controller's module
   beforeEach(module('angularMaterialFullstackApp'));
 
-  var UserCtrl, scope;
+  var SkillsCtrl, scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    UserCtrl = $controller('UserController', {
+    SkillsCtrl = $controller('SkillsController', {
       $scope: scope
     });
   }));

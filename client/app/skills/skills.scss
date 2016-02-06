@@ -1,0 +1,38 @@
+.other-skills-option {
+  float: left;
+  width: 20%;
+  box-sizing: border-box;
+  padding: 0 8px; }
+.other-skills-option .md-item-text {
+  padding: 8px;
+  background: #f0f0f0;
+  border-radius: 3px; }
+.other-skills-option .md-item-text h3,
+.other-skills-option .md-item-text p {
+  padding: 0;
+  margin: 0; }
+
+@media (max-width: 599px) {
+  .other-skills-option {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 8px; }
+}
+
+
+@media (min-width: 600px) and (max-width: 1129px) {
+  .other-skills-option {
+    float: left;
+    width: 33.33%;
+    box-sizing: border-box;
+    padding: 0 8px; }
+}
+
+@media (min-width: 1129px) and (max-width: 1279px) {
+  .other-skills-option {
+    float: left;
+    width: 25%;
+    box-sizing: border-box;
+    padding: 0 8px; }
+}

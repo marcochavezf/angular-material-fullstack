@@ -2089,9 +2089,63 @@
 @media screen and (min-width: 768px) {
   .container {
     max-width: 730px; } }
-.card-media {
-  background-color: #999999; }
+.tool-bar-aboutme {
+  margin-bottom: 15px; }
 
+.card-content-aboutme {
+  margin-bottom: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: justify; }
+
+.card-avatar-aboutme {
+  height: 100px;
+  width: 100px; }
+
+.h3-aboutme {
+  margin: 25px auto 0 10px; }
+
+.button-contact-aboutme {
+  margin: 0 auto auto 17.5px; }
+
+.button-social-network-first-sm {
+  display: none;
+  margin: 0 0 auto 5px; }
+
+.button-social-network-first {
+  display: inline;
+  margin: 0 0 auto 5px; }
+
+.button-social-network {
+  display: inline;
+  margin: 0 0 auto 5px; }
+
+@media (max-width: 599px) {
+  .card-content-aboutme {
+    margin-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: justify; }
+
+  .button-social-network-first-sm {
+    display: inline;
+    margin: 0; }
+
+  .button-social-network-first {
+    display: none; }
+
+  .button-social-network {
+    display: inline;
+    margin: 0; }
+
+  .md-button.md-icon-button {
+    margin: 0;
+    height: 40px;
+    min-width: 0;
+    line-height: 24px;
+    padding: 8px;
+    width: 40px;
+    border-radius: 50%; } }
 /* Toolbar area */
 .menu {
   background-color: transparent;
@@ -2179,6 +2233,53 @@ span.name {
 md-toolbar {
   min-height: 64px; }
 
+.animate-show.ng-hide-add, .animate-show.ng-hide-remove {
+  display: block !important;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out; }
+
+.animate-show.ng-hide-add.ng-hide-add-active, .animate-show.ng-hide-remove {
+  opacity: 0; }
+
+.animate-show.ng-hide-add, .animate-show.ng-hide-remove.ng-hide-remove-active {
+  opacity: 1; }
+
+.other-skills-option {
+  float: left;
+  width: 20%;
+  box-sizing: border-box;
+  padding: 0 8px; }
+
+.other-skills-option .md-item-text {
+  padding: 8px;
+  background: #f0f0f0;
+  border-radius: 3px; }
+
+.other-skills-option .md-item-text h3,
+.other-skills-option .md-item-text p {
+  padding: 0;
+  margin: 0; }
+
+@media (max-width: 599px) {
+  .other-skills-option {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 8px; } }
+@media (min-width: 600px) and (max-width: 1129px) {
+  .other-skills-option {
+    float: left;
+    width: 33.33%;
+    box-sizing: border-box;
+    padding: 0 8px; } }
+@media (min-width: 1129px) and (max-width: 1279px) {
+  .other-skills-option {
+    float: left;
+    width: 25%;
+    box-sizing: border-box;
+    padding: 0 8px; } }
 footer.footer {
   text-align: center;
   padding: 30px 0;

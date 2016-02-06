@@ -12,8 +12,7 @@ angular.module('angularMaterialFullstackApp', [
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider
-      .otherwise('/main/user');
-
+      .otherwise('/main');
     $locationProvider.html5Mode(true);
   })
   .config(function($mdThemingProvider, $mdIconProvider){
@@ -26,12 +25,19 @@ angular.module('angularMaterialFullstackApp', [
       .icon('google_plus', './assets/svg/google_plus.svg' , 512)
       .icon('hangouts'   , './assets/svg/hangouts.svg'    , 512)
       .icon('twitter'    , './assets/svg/twitter.svg'     , 512)
-      .icon('phone'      , './assets/svg/phone.svg'       , 512);
+      .icon('linkedin'   , './assets/svg/linkedin.svg'    , 512)
+      .icon('github'     , './assets/svg/github.svg'      , 512)
+      .icon('phone'      , './assets/svg/phone.svg'       , 512)
+      .icon('aboutme'    , './assets/svg/aboutme.svg'    , 512)
+      .icon('projects'   , './assets/svg/projects.svg'    , 512)
+      .icon('skills'     , './assets/svg/skills.svg'      , 512)
+      .icon('contact'    , './assets/svg/contact.svg'     , 512)
+    ;
+
 
     $mdThemingProvider.theme('default')
       .primaryPalette('teal')
-      .accentPalette('light-green');
-
+      .accentPalette('green');
   })
 
   .config(function ($translateProvider) {

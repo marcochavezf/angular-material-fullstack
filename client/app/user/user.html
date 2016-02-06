@@ -1,8 +1,0 @@
-<md-icon md-svg-icon="{{user.icon}}" class="avatar"></md-icon>
-<h2>{{ user.name }}</h2>
-<p>{{ user.content | translate }}</p>
-
-<md-button class="contact" md-no-ink ng-click="makeContact()" aria-label="Share with {{ user.name }}">
-  <md-tooltip>{{ ("Contact" | translate) + ' '+ user.name }}</md-tooltip>
-  <md-icon md-svg-icon="share"></md-icon>
-</md-button>

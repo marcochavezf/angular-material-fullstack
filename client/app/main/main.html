@@ -1,6 +1,6 @@
 <div layout="row" ng-cloak class="full-height">
 
-  <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2"
+  <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2 md-accent"
               md-component-id="left"
               ng-click="toggleList()" aria-label="Show User List"
               md-is-locked-open="$mdMedia('gt-sm')">
@@ -10,11 +10,18 @@
     </md-toolbar>
 
     <md-list>
-      <md-list-item ng-repeat="it in menu">
-          <md-button ng-click="changeState(it.state)" ng-class="{'selected' : it.state === state.current.name }">
-            <md-icon md-svg-icon="{{it.icon}}" class="avatar"></md-icon>
-            {{it.title}}
+      <md-list-item ng-repeat="menuItem in menu">
+          <md-button ng-click="changeState(menuItem)" ng-class="{'selected' : menuItem.state === currentMenuItem.state }">
+            <md-icon md-svg-icon="{{menuItem.icon}}" class="avatar"></md-icon>
+            {{ menuItem.title | translate }}
           </md-button>
+      </md-list-item>
+
+      <md-list-item>
+        <md-button ng-click="makeContact()">
+          <md-icon md-svg-icon="contact" class="avatar"></md-icon>
+          {{ "Contact" | translate }}
+        </md-button>
       </md-list-item>
     </md-list>
 
@@ -28,14 +35,14 @@
       <md-button id="main" class="menu" hide-gt-sm ng-click="toggleList()" aria-label="Show User List">
         <md-icon md-svg-icon="menu" ></md-icon>
       </md-button>
-      <h3>Angular Material - Starter App</h3>
+      <h3>{{ currentMenuItem.title | translate }}</h3>
 
       <div ng-translate-language-select></div>
 
 
     </md-toolbar>
 
-    <md-content ui-view flex id="content">
+    <md-content ui-view flex scroller id="content">
     </md-content>
 
   </div>

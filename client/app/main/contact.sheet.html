@@ -1,0 +1,17 @@
+<md-bottom-sheet id="bottom-sheet" class="md-list md-has-header">
+
+    <md-subheader>
+        {{ "Contact" | translate }}:
+    </md-subheader>
+
+    <md-list>
+      <md-item ng-repeat="item in actions">
+        <md-button ng-click="submitContact(item)" id="item_{{$index}}">
+            <md-icon md-svg-icon="{{ item.icon_url }}"></md-icon>
+            {{ item.name | translate }}
+        </md-button>
+      </md-item>
+    </md-list>
+
+
+</md-bottom-sheet>

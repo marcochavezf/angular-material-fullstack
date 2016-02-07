@@ -113,3 +113,13 @@ span.name {
 md-toolbar {
   min-height: 64px;
 }
+
+.language-select {
+  margin: 0 50px 0 0; padding-top: 15px
+}
+
+@media (max-width: 599px) {
+  .language-select {
+    margin: 0 15px 0 0; padding-top: 15px
+  }
+}

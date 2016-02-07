@@ -5,7 +5,7 @@ angular.module('angularMaterialFullstackApp') .directive('ngTranslateLanguageSel
     restrict: 'A',
     replace: true,
     template: ''+
-    '<md-input-container ng-if="visible" style="margin: 0 50px 0 0; padding-top: 15px">'+
+    '<md-input-container ng-if="visible" class="language-select">'+
     '<md-select ng-model="currentLocaleDisplayName" placeholder="{{ \'Language\' | translate }}" ng-change="changeLanguage(currentLocaleDisplayName)">'+
     '<md-option ng-repeat="localesDisplayName in localesDisplayNames" value="{{localesDisplayName}}">'+
     '{{localesDisplayName}}'+

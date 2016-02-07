@@ -30,7 +30,7 @@
   "pideunkangou.project.explanation" : "On-Demand local delivery web app for <a href='http://go.kangou.ninja' target='_blank'>Kangou</a>. Users can save debit/credit cards and check the orders placed.",
   "mexgou.project.explanation": "<a href='http://www.allpago.com/2015/11/the-new-mexican-urban-distribution-service/'>Mexican urban distribution service</a> web app. This is a service powered by <a href='http://kangou.ninja' target='_blank'>Kangou</a> for deliveries in 35 mexican cities.",
   "kangouapi.project.explanation" : "On-Demand logistics solution for third-party companies. This tool can be integrated in any platform.",
-  "Dashboard/Custom B.I." : "Dashboard/Custom B.I.",
+  "Dashboard/Custom B.I." : "Dashboard/B. I.",
   "dashboard.project.explanation" : "Dashboard with custom Business Intelligence for <a href='http://kangou.ninja' target='_blank'>Kangou</a>. It visualizes and process orders, customers and couriers data.",
   "kangouios.project.explanation" : "On-Demand Local Delivery app for <a href='http://kangou.ninja' target='_blank'>Kangou</a>. Users can order almost anything to be delivered and tracked in real time.",
   "Kangou for messengers" : "Kangou for messengers",

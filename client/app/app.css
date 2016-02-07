@@ -2098,6 +2098,12 @@
   padding-right: 50px;
   text-align: justify; }
 
+.card-content-aboutme-bullets {
+  margin-bottom: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: justify; }
+
 .card-avatar-aboutme {
   height: 100px;
   width: 100px; }
@@ -2120,12 +2126,30 @@
   display: inline;
   margin: 0 0 auto 5px; }
 
+@media (max-width: 448px) {
+  .button-contact-aboutme {
+    margin: 0 40px 10px 17.5px; } }
+@media (min-width: 449px) and (max-width: 500px) {
+  .button-contact-aboutme {
+    margin: 0 100px 10px 17.5px; } }
+@media (min-width: 501px) and (max-width: 550px) {
+  .button-contact-aboutme {
+    margin: 0 170px 10px 17.5px; } }
+@media (min-width: 551px) and (max-width: 599px) {
+  .button-contact-aboutme {
+    margin: 0 200px 10px 17.5px; } }
 @media (max-width: 599px) {
   .card-content-aboutme {
     margin-bottom: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
     text-align: justify; }
+
+  .card-content-aboutme-bullets {
+    margin-bottom: 20px;
+    padding-left: 0;
+    padding-right: 20px;
+    text-align: left; }
 
   .button-social-network-first-sm {
     display: inline;
@@ -2145,7 +2169,10 @@
     line-height: 24px;
     padding: 8px;
     width: 40px;
-    border-radius: 50%; } }
+    border-radius: 50%; }
+
+  .h3-aboutme {
+    margin: 10px auto 0 10px; } }
 /* Toolbar area */
 .menu {
   background-color: transparent;
@@ -2233,6 +2260,14 @@ span.name {
 md-toolbar {
   min-height: 64px; }
 
+.language-select {
+  margin: 0 50px 0 0;
+  padding-top: 15px; }
+
+@media (max-width: 599px) {
+  .language-select {
+    margin: 0 15px 0 0;
+    padding-top: 15px; } }
 .animate-show.ng-hide-add, .animate-show.ng-hide-remove {
   display: block !important;
   -webkit-transition: opacity 1s ease-in-out;

@@ -2268,6 +2268,54 @@ md-toolbar {
   .language-select {
     margin: 0 15px 0 0;
     padding-top: 15px; } }
+.md-bottom-sheet-backdrop {
+  transition: opacity 450ms;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50; }
+
+.md-has-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 8px 16px 88px 16px;
+  z-index: 70;
+  border-top-width: 1px;
+  border-top-style: solid;
+  -webkit-transform: translate3d(0, 80px, 0);
+  transform: translate3d(0, 80px, 0);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-property: -webkit-transform;
+  transition-property: transform; }
+
+@media (min-width: 960px) {
+  .md-bottom-sheet-backdrop {
+    transition: opacity 450ms;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 320px;
+    right: 0;
+    z-index: 50; }
+
+  .md-has-header {
+    position: fixed;
+    left: 320px;
+    right: 0;
+    bottom: 0;
+    padding: 8px 16px 88px 16px;
+    z-index: 70;
+    border-top-width: 1px;
+    border-top-style: solid;
+    -webkit-transform: translate3d(0, 80px, 0);
+    transform: translate3d(0, 80px, 0);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-property: -webkit-transform;
+    transition-property: transform; } }
 .animate-show.ng-hide-add, .animate-show.ng-hide-remove {
   display: block !important;
   -webkit-transition: opacity 1s ease-in-out;

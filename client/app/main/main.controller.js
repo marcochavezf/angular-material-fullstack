@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('angularMaterialFullstackApp')
-  .controller('MainController', function($scope, $rootScope, $state, $mdSidenav, $mdBottomSheet){
+  .controller('MainController', function($scope, $rootScope, $state, $window, $mdSidenav, $mdBottomSheet){
 
     var isShowingContactSheet = false;
       $scope.menu = [
@@ -57,6 +57,12 @@ angular.module('angularMaterialFullstackApp')
       });
     };
 
+    var w = angular.element($window);
+    w.bind('resize', function () {
+      isShowingContactSheet = false;
+      $mdBottomSheet.hide();
+    });
+
     var unbindMakeContact = $rootScope.$on('makeContact', function(){
       $scope.makeContact();
     });
@@ -67,6 +73,9 @@ angular.module('angularMaterialFullstackApp')
 
     $scope.$on('$destroy', unbindMakeContact);
     $scope.$on('$destroy', unbindHideContact);
+    $scope.$on('$destroy', function() {
+      w.unbind('resize');
+    });
 
     if($state.current.name === 'main'){
       $scope.currentMenuItem = $scope.menu[0];
